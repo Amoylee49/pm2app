@@ -14,7 +14,7 @@ app.get('/puppe', (req, res) => {
                 res.send(data)
             })
             .catch(
-                err => res.status(500).send("访问错误？"))
+                err => res.status(500).send("链接错误？"))
     })
 
 })

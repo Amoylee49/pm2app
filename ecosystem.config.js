@@ -3,7 +3,7 @@ module.exports = {
         //First Application
         {
             name: 'pm2app',
-            script: 'index.js',
+            script: 'puppeteerServer.js',
             env: {
                 COMMON_VARIABLE: "true"
             },
@@ -17,8 +17,8 @@ module.exports = {
             user: 'root',
             host: '192.168.195.5',
             ref: 'origin/master',
-            repo: 'GIT_REPOSITORY',
-            path: 'DESTINATION_PATH',
+            repo: 'https://github.com/Amoylee49/pm2app.git',
+            path: '/root/pm2/',
             'pre-deploy-local': '',
             'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production',
             'pre-setup': ''

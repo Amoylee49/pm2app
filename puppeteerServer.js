@@ -14,13 +14,13 @@ app.get('/puppe', (req, res) => {
                 res.send(data)
             })
             .catch(
-                err => res.status(500).send("链接错误？"))
+                err => res.status(500).send("链接访问错误？"))
     })
 
 })
 
 const scrapeYoutube = async (query) => {
-    console.log(query)
+    console.log(query.heroName)
     const browser = await puppeteer.launch({
             // headless: false,
             // slowMo: 3000,
